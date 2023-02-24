@@ -28,7 +28,7 @@ function handleMessage(msg) {
 function checkLoggedIn() {
 	chrome.storage.local.get(['data']).then((result) => {
 		if (result.data === undefined) {
-			chrome.contextMenus.remove(contextMenuItem.id);
+			chrome.contextMenus.removeAll();
 		} else {
 			chrome.contextMenus.create(contextMenuItem);
 			chrome.contextMenus.onClicked.addListener(function (data) {
