@@ -6,6 +6,8 @@ function login() {
 	chrome.runtime.sendMessage({
 		type: 'login',
 		url: document.getElementById('txt-url').value,
+		username: document.getElementById('txt-username').value,
+		password: document.getElementById('txt-password').value,
 	});
 }
 
